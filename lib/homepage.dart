@@ -35,21 +35,21 @@ class _homepageState extends State<homepage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        gettext(
+                        getText(
                             index, "id:-", userDetails[index].id.toString()),
-                        gettext(index, "Username:-",
+                        getText(index, "Username:-",
                             userDetails[index].username.toString()),
-                        gettext(index, "name:-",
+                        getText(index, "name:-",
                             userDetails[index].name.toString()),
-                        gettext(index, "Email:-",
+                        getText(index, "Email:-",
                             userDetails[index].email.toString()),
-                        gettext(index, "phone:-",
+                        getText(index, "phone:-",
                             userDetails[index].phone.toString()),
-                        gettext(index, "company:-",
+                        getText(index, "company:-",
                             "${userDetails[index].company.toString()}${userDetails[index].company.name.toString()}${userDetails[index].company.catchPhrase.toString()}"),
-                        gettext(index, "Site:-",
+                        getText(index, "Site:-",
                             userDetails[index].website.toString()),
-                        gettext(index, "Address:-",
+                        getText(index, "Address:-",
                             "${userDetails[index].address.suite.toString()},${userDetails[index].address.street.toString()},${userDetails[index].address.city.toString()}-${userDetails[index].address.zipcode.toString()}"),
                       ],
                     ),
@@ -63,7 +63,7 @@ class _homepageState extends State<homepage> {
     );
   }
 
-  Text gettext(int index, String filedname, String content) {
+  Text getText(int index, String filedname, String content) {
     return Text.rich(TextSpan(
       children: [
         TextSpan(
